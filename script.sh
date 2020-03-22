@@ -25,6 +25,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Alt>3']
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Alt>4']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-last "['<Alt>5']"
 
+gsettings set org.gnome.desktop.interface enable-animations "false"
 
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Primary>1']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Primary>2']"
