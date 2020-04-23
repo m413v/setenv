@@ -2,7 +2,7 @@
 
 echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
 echo "alias exit=savelog; exit"
-echo "alias scr='script scriptlog_`date +\"%Y-%m-%d_%T\"`'" >> ~/.bashrc 
+#echo "alias scr='script scriptlog_`date +\"%Y-%m-%d_%T\"`'" >> ~/.bashrc 
 #echo "smart_script" >> ~/.bashrc
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
@@ -43,6 +43,6 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click "true"
 echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
-
-apt update && apt -y install terminator vim tmux glances git
-echo "[*] Stuff installed"
+#btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
+apt update && apt -y install terminator vim tmux glances git firefox zaproxy && apt upgrade
+echo "[*] Stuff installed, upgraded"
