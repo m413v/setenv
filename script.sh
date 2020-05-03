@@ -44,5 +44,5 @@ echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
 #btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
-apt update && apt -y install terminator vim tmux glances git firefox zaproxy && apt upgrade
+apt update && apt -y install terminator vim tmux glances git firefox-esr zaproxy && apt upgrade
 echo "[*] Stuff installed, upgraded"
