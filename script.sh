@@ -3,6 +3,8 @@
 echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
 echo "alias exit=savelog; exit" >> ~/.bashrc
 echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
+echo "alias grep=\"grep --color\"" >> ~/.bashrc
+
 
 #echo "alias scr='script scriptlog_`date +\"%Y-%m-%d_%T\"`'" >> ~/.bashrc 
 #echo "smart_script" >> ~/.bashrc
