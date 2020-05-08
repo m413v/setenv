@@ -21,6 +21,8 @@ mkdir -p ~/.config/terminator/
 cp -v ./terminator.rc ~/.config/terminator/config
 echo "[*] Terminator settings restored"
 
+
+#you can get configuration using: `dconf dump /desktop/ibus/`
 dconf load /desktop/ibus/ < ibus.dconf
 echo "[*]Fix for ctrl+shift+e shortcut in terminator applied"
 
