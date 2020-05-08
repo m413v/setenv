@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
-echo "alias exit=savelog; exit" >> ~/.bashrc
 echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
 echo "alias grep=\"grep --color\"" >> ~/.bashrc
 
@@ -17,10 +16,8 @@ mkdir -p ~/.config/terminator/
 cp -v ./terminator.rc ~/.config/terminator/config
 echo "[*] Terminator settings restored"
 
-
-#you can get configuration using: `dconf dump /desktop/ibus/`
-#dconf load /desktop/ibus/ < ibus.dconf
-#echo "[*]Fix for ctrl+shift+e shortcut in terminator applied"
+#fix for ctrl shift e issue in terminator, neat oneliner  
+gsettings set org.freedesktop.ibus.panel.emoji hotkey []
 
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.mutter workspaces-only-on-primary false
