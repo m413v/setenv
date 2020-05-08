@@ -13,10 +13,6 @@ echo "[*] History and script in ~/.bashrc set."
 
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
-
-cp -v ./vimrc ~/.vimrc
-echo "[*] Vimrc config file copied"
-
 mkdir -p ~/.config/terminator/
 cp -v ./terminator.rc ~/.config/terminator/config
 echo "[*] Terminator settings restored"
