@@ -21,6 +21,9 @@ mkdir -p ~/.config/terminator/
 cp -v ./terminator.rc ~/.config/terminator/config
 echo "[*] Terminator settings restored"
 
+dconf load /desktop/ibus/ < ibus.dconf
+echo "[*]Fix for ctrl+shift+e shortcut in terminator applied"
+
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 
