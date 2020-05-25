@@ -10,6 +10,9 @@ echo "alias grep=\"grep --color\"" >> ~/.bashrc
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
 
+
+#putting bash_profile tweak due to tmux not sourcing bashrc in default configuration
+cp -v ./bash_profile ~/.bash_profile
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
 mkdir -p ~/.config/terminator/
