@@ -11,8 +11,15 @@ cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
 
 
-#putting bash_profile tweak due to tmux not sourcing bashrc in default configuration
-cp -v ./bash_profile ~/.bash_profile
+#small change due to the fact, that previous aproach caused trobles with gnome on xorg.
+cat <<EOT >> ~/.bashrc
+if command -v tmux>/dev/null; then
+        if [ ! -z "$PS1" ]; then # unless shell not loaded interactively, run tmux
+                [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
+        fi
+fi
+EOT
+
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
 mkdir -p ~/.config/terminator/
