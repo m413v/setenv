@@ -1,0 +1,10 @@
+export HISTTIMEFORMAT="%d/%m/%y %T "
+alias grepip='grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"'
+if command -v tmux>/dev/null; then
+        if [ ! -z "$PS1" ]; then # unless shell not loaded interactively, run tmux
+                [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
+        fi
+fi
+
+THEIP=$(ip addr show | grep "inet "| grep -v 127.0.0.1 | cut -d" " -f6)
+PS1="\[\033[01;31m\]\u@"$THEIP" \w $\[\033[00m\] ";

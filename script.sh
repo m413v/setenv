@@ -1,24 +1,19 @@
 #!/bin/bash
 
-echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
-echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
-echo "alias grep=\"grep --color\"" >> ~/.bashrc
+#echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
+#echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
+#echo "alias grep=\"grep --color\"" >> ~/.bashrc
 
 
 #echo "alias scr='script scriptlog_`date +\"%Y-%m-%d_%T\"`'" >> ~/.bashrc 
 #echo "smart_script" >> ~/.bashrc
+
+
+cat ./bashrc_mum >> ~/.bashrc
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
 
 
-#small change due to the fact, that previous aproach caused trobles with gnome on xorg.
-cat <<EOT >> ~/.bashrc
-if command -v tmux>/dev/null; then
-        if [ ! -z "$PS1" ]; then # unless shell not loaded interactively, run tmux
-                [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
-        fi
-fi
-EOT
 
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
