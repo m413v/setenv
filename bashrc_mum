@@ -6,5 +6,5 @@ if command -v tmux>/dev/null; then
         fi
 fi
 
-THEIP=$(ip addr show | grep "inet "| grep -v 127.0.0.1 | cut -d" " -f6)
+THEIP=$(ip addr show | grep "inet "| grep -v 127.0.0.1 | grep -v 172 | cut -d" " -f6 | awk 1 ORS='|')
 PS1="\[\033[01;31m\]\u@"$THEIP" \w $\[\033[00m\] ";
