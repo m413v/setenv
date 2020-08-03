@@ -9,11 +9,10 @@
 #echo "smart_script" >> ~/.bashrc
 
 
-cat ./bashrc_mum >> ~/.bashrc
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
 
-
+git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux-logging/
 
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
