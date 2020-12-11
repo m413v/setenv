@@ -12,7 +12,8 @@
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
 
-git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux-logging/
+git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
+git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
 
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
@@ -54,5 +55,5 @@ echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
 #btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
-apt update && apt -y install terminator vim tmux glances git firefox-esr zaproxy && apt upgrade
+apt update && apt -y install terminator vim xclip xsel tmux glances git firefox-esr zaproxy && apt upgrade
 echo "[*] Stuff installed, upgraded"
