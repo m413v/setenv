@@ -1,5 +1,3 @@
-export HISTTIMEFORMAT="%d/%m/%y %T "
-alias scr='script scriptlog_`date +"%Y-%m-%d_%T"`' 
-aliast exit='savelog;exit'
-smart_script
-
+alias pp="python3 -m http.server "
+alias ..="cd ../"
+alias allr='for x in $(find . -name "*.txt"); do echo -e "\e[92m#########################################################"; echo $x; echo -e "#########################################################\e[0m"; cat $x; done;'

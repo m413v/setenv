@@ -11,6 +11,8 @@
 
 cp ./bash_aliases ~/.bash_aliases
 echo "[*] History and script in ~/.bashrc set."
+cat ./bash_rc >> ~/.bashrc
+echo "[*] pp, allr, .. set."
 
 git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
