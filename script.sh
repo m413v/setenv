@@ -17,8 +17,12 @@ echo "[*] pp, allr, .. set."
 git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
 
+cp -v ./vimrc ~/.vimrc
+echo "[*] Vim conf copied"
+
 cp -v ./tmux.conf ~/.tmux.conf
 echo "[*] Tmux conf copied"
+
 mkdir -p ~/.config/terminator/
 cp -v ./terminator.rc ~/.config/terminator/config
 echo "[*] Terminator settings restored"
