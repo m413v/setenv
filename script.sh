@@ -33,14 +33,19 @@ gsettings set org.freedesktop.ibus.panel.emoji hotkey []
 gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 
-gsettings set org.gnome.desktop.wm.preferences num-workspaces 5
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 9
 
-echo "5 workspaces set, on both screens."
+echo "9 workspaces set, on both screens."
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Alt>1']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Alt>2']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Alt>3']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Alt>4']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-last "['<Alt>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Alt>5']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-6 "['<Alt>6']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Alt>7']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Alt>8']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Alt>9']"
+
 
 gsettings set org.gnome.desktop.interface enable-animations "false"
 
@@ -48,7 +53,12 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Primary>1
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Primary>2']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-3 "['<Primary>3']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-4 "['<Primary>4']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-last "['<Primary>5']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Primary>5']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-6 "['<Primary>6']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Primary>7']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Primary>8']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Primary>9']"
+
 
 echo "[*] Shortcuts alt and ctrl set."
 
