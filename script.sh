@@ -82,5 +82,5 @@ apt -y install git
 apt -y install firefox-esr 
 apt -y install zaproxy  
 apt -y install joplin
-apt upgrade
+apt -y upgrade
 echo "[*] Stuff installed, upgraded"
