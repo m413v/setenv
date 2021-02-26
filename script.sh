@@ -59,7 +59,6 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-7 "['<Primary>7
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-8 "['<Primary>8']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-9 "['<Primary>9']"
 
-
 echo "[*] Shortcuts alt and ctrl set."
 
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type "'nothing'"
@@ -71,5 +70,17 @@ echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
 #btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
-apt update && apt -y install remmina terminator vim xclip xsel tmux glances git firefox-esr zaproxy && apt upgrade
+apt update 
+apt -y install remmina 
+apt -y install terminator 
+apt -y install vim 
+apt -y install xclip 
+apt -y install xsel 
+apt -y install tmux 
+apt -y install glances 
+apt -y install git 
+apt -y install firefox-esr 
+apt -y install zaproxy  
+apt -y install joplin
+apt upgrade
 echo "[*] Stuff installed, upgraded"
