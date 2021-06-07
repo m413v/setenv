@@ -81,6 +81,7 @@ apt -y install glances
 apt -y install git 
 apt -y install firefox-esr 
 apt -y install zaproxy  
+apt -y install sshpass
 apt -y install joplin
 apt -y upgrade
 echo "[*] Stuff installed, upgraded"
