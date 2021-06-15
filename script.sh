@@ -69,6 +69,9 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click "true"
 echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
+
+touch ~/.hushlogin
+
 #btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
 apt update 
 apt -y install remmina 
