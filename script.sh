@@ -47,7 +47,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Alt>8']
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Alt>9']"
 
 
-gsettings set org.gnome.desktop.interface enable-animations "false"
+gsettings set org.gnome.desktop.interface enable-animations "true"
 
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Primary>1']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Primary>2']"
