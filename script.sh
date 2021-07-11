@@ -16,6 +16,8 @@ echo "[*] pp, allr, .. set."
 
 git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect/
+
 
 cp -v ./vimrc ~/.vimrc
 echo "[*] Vim conf copied"
