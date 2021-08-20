@@ -16,6 +16,8 @@ echo "[*] pp, allr, .. set."
 
 git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
 git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect/
+
 
 cp -v ./vimrc ~/.vimrc
 echo "[*] Vim conf copied"
@@ -47,7 +49,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Alt>8']
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Alt>9']"
 
 
-gsettings set org.gnome.desktop.interface enable-animations "false"
+gsettings set org.gnome.desktop.interface enable-animations "true"
 
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Primary>1']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-2 "['<Primary>2']"
