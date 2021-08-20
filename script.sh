@@ -87,5 +87,6 @@ apt -y install zaproxy
 apt -y install sshpass
 apt -y install joplin
 apt -y install ansible
+apt -y install screen
 apt -y upgrade
 echo "[*] Stuff installed, upgraded"
