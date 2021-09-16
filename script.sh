@@ -88,6 +88,7 @@ apt -y install firefox-esr
 apt -y install zaproxy  
 apt -y install sshpass
 apt -y install joplin
+apt -y install brasero
 apt -y install ansible
 apt -y upgrade
 echo "[*] Stuff installed, upgraded"
