@@ -48,6 +48,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-7 "['<Alt>7']
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-8 "['<Alt>8']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-9 "['<Alt>9']"
 
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot-clip "['<Shift><Super>s']"
 
 gsettings set org.gnome.desktop.interface enable-animations "true"
 
