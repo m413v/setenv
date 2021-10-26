@@ -91,6 +91,7 @@ apt -y install sshpass
 apt -y install joplin
 apt -y install brasero
 apt -y install ansible
+apt -y install flameshot
 apt -y install screen
 apt -y upgrade
 echo "[*] Stuff installed, upgraded"
