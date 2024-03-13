@@ -1,7 +1,9 @@
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch 2>/dev/null | sed -n '/\* /s///p' | awk '{printf "\033[38;5;196m(%s)\033[m", $1}'
 }
-export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+
+export PS1="\033[38;5;214m\u\033[m@\033[38;5;33m\h\033[m \033[38;5;82m\w\033[m \$(parse_git_branch) \033[38;5;82m\$\033[m "
+
 
 
 alias pp="python3 -m http.server "
