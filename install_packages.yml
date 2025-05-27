@@ -1,7 +1,9 @@
+# ansible-playbook -i hosts install_packages.yml -K # remotely
+# ansible-playbook install_packages.yml # locally
 ---
 - name: Install software based on OS family (Debian vs RedHat)
-  hosts: localhost
-  connection: local
+  hosts: all
+  #connection: local
   become: true
 
   vars:
