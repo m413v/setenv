@@ -1,23 +1,11 @@
 #!/bin/bash
 
-#echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
-#echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
-#echo "alias grep=\"grep --color\"" >> ~/.bashrc
+echo "export HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc
+echo "alias grepip='grep -oE \"\b([0-9]{1,3}\.){3}[0-9]{1,3}\b\"'" >> ~/.bashrc
+echo "alias grep=\"grep --color\"" >> ~/.bashrc
 
-
-#echo "alias scr='script scriptlog_`date +\"%Y-%m-%d_%T\"`'" >> ~/.bashrc 
-#echo "smart_script" >> ~/.bashrc
-
-
-cp ./bash_aliases ~/.bash_aliases
-echo "[*] History and script in ~/.bashrc set."
-cat ./bash_rc >> ~/.bashrc
-echo "[*] pp, allr, .. set."
 
 git clone https://github.com/tmux-plugins/tmux-logging ~/.tmux/tmux-logging/
-git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/tmux-yank/
-git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect/
-
 
 cp -v ./vimrc ~/.vimrc
 echo "[*] Vim conf copied"
@@ -73,25 +61,3 @@ echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
 
-touch ~/.hushlogin
-
-#btw, this stuff is based on `gsettings list-recursively`. You can run this command before changing settings via GUI, change setting, run it again and check the differences with diff.
-apt update 
-apt -y install remmina 
-apt -y install terminator 
-apt -y install vim 
-apt -y install xclip 
-apt -y install xsel 
-apt -y install tmux 
-apt -y install glances 
-apt -y install git 
-apt -y install firefox-esr 
-apt -y install zaproxy  
-apt -y install sshpass
-apt -y install joplin
-apt -y install brasero
-apt -y install ansible
-apt -y install flameshot
-apt -y install screen
-apt -y upgrade
-echo "[*] Stuff installed, upgraded"
