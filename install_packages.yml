@@ -1,0 +1,47 @@
+---
+- name: Install software based on OS family (Debian vs RedHat)
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    packages:
+      - name: remmina
+      - name: terminator
+      - name: vim
+        deb: vim
+        rpm: vim-enhanced
+      - name: xclip
+      - name: xsel
+      - name: tmux
+      - name: glances
+      - name: git
+      - name: firefox
+        deb: firefox-esr
+        rpm: firefox
+      - name: zaproxy  # handled separately
+      - name: sshpass
+      - name: brasero
+      - name: ansible
+      - name: flameshot
+      - name: screen
+
+  tasks:
+
+    - name: Install packages individually (Debian)
+      apt:
+        name: "{{ item.deb if item.deb is defined else item.name }}"
+        state: present
+        update_cache: yes
+      loop: "{{ packages }}"
+      when: ansible_os_family == "Debian"
+      ignore_errors: yes
+
+    - name: Install packages individually (RedHat)
+      package:
+        name: "{{ item.rpm if item.rpm is defined else item.name }}"
+        state: present
+      loop: "{{ packages }}"
+      when: ansible_os_family == "RedHat"
+      ignore_errors: yes
+
