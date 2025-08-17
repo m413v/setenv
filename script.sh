@@ -61,3 +61,5 @@ echo "[*] Tap to click on touchpad set."
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed "false"
 echo "[*] Autohide for dock enabled."
 
+gsettings set org.gnome.mutter.wayland xwayland-disable-extension  '["Xtest"]'
+echo "[*] Small fix for wayland remote desktop windows."
